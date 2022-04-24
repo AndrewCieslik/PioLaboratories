@@ -1,9 +1,12 @@
+import java.util.Random;
 public class Game{
     private Player player;
+    private Random dice = new Random();
+
     public void addPlayer(Player player){
-        this.player = player    }
+        this.player = player;
+    }
     public void play() {
-        Random dice = new Random();
         int number;
         int guess;
 
@@ -20,7 +23,5 @@ public class Game{
                 System.out.println("Wrong!");
             }
         } while (number != guess);
-    }
-
     }
 }

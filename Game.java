@@ -10,6 +10,7 @@ public class Game {
     public void addPlayer(Player player){
         players.add(player);
     }
+
     public void play() {
         int number;
         int guess;

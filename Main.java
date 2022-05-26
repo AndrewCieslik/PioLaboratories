@@ -3,6 +3,8 @@ public class Main {
         Game game = new Game();
 
         game.addPlayer(new PlayerHuman("Tytus"));
+        game.addPlayer(new PlayerHuman("Romek"));
+
         game.play();
     }
 }

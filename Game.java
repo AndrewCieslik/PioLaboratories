@@ -10,10 +10,17 @@ public class Game {
 
     public final Statistics stats;
 
-    public Game(Statistics stats) {
-        this.stats = stats;
+    public Game() {
+        this(null);
     }
 
+    public Game(Statistics stats) {
+        if (stats != null) {
+            this.stats = stats;
+        } else {
+            this.stats = new NullStatistics();
+        }
+    }
 
     public void addPlayer(Player player){
         if (!nameExists(player.getName())) {

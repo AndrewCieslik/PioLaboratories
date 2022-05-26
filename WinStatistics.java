@@ -14,7 +14,7 @@ public class WinStatistics implements Statistics {
 
     @Override
     public void print() {
-        System.out.println("#########################");
+        System.out.println("TOP PLAYER:");
         stats.forEach((player, score) -> {
             System.out.println(player.getName() + ": " + score);
         });

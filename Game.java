@@ -61,6 +61,7 @@ public class Game {
                 } else {
                     System.out.println("Win!");
                     repeat = false;
+                    stats.andTheWinnerIs(player);
                 }
             }
 

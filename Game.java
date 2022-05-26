@@ -8,7 +8,21 @@ public class Game {
     private List<Player> players = new ArrayList();
 
     public void addPlayer(Player player){
-        players.add(player);
+        if (!nameExists(player.getName())) {
+            players.add(player);
+        } else {
+            player.setName(player.getName() + dice.nextInt(10));
+            addPlayer(player);
+        }
+    }
+
+    private boolean nameExists(String name) {
+        for (Player player : players) {
+            if (player.getName().equals(name)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void play() {

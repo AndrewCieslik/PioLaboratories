@@ -8,6 +8,13 @@ public class Game {
     private Random dice = new Random();
     private List<Player> players = new ArrayList();
 
+    public final Statistics stats;
+
+    public Game(Statistics stats) {
+        this.stats = stats;
+    }
+
+
     public void addPlayer(Player player){
         if (!nameExists(player.getName())) {
             players.add(player);

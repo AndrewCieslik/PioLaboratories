@@ -6,8 +6,12 @@ abstract public class Player {
 
     public abstract int guess();
 
+    public String getName() {
+        return name;
+    }
+
     public void setName(String name) {
-        if (name != null && name.matches("^[a-zA-Z0-9.\\-]{3,}$")) {
+        if (name != null && name.matches("^[a-zA-Z0-9.\\-]{3,}$")) {            //regex101 page
             this.name = name;
         }
         else {
@@ -15,7 +19,10 @@ abstract public class Player {
            throw new IllegalArgumentException("Wrong name");
         }
     }
-    public Player() {}
+    public Player() {
+
+    }
+
     public Player (String name) {
         setName(name);
     }
@@ -25,5 +32,3 @@ abstract public class Player {
     }
 }
 
-//regex101
-//^[a-zA-Z0-9.\-]{3,}$
